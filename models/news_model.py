@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Text
-from settings.database_settings import Base
+from settings.database_settings import Base, engine
 
 
 class News(Base):
@@ -8,3 +8,5 @@ class News(Base):
     title = Column(String)
     link = Column(String)
     articles = Column(Text)
+
+Base.metadata.create_all(bind=engine)

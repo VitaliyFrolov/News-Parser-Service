@@ -6,13 +6,4 @@ services:
     restart: "always"
     container_name: "news-parser-service"
     ports:
-      - "8000:8000"
-  postgres:
-    image: postgres:latest
-    container_name: "postgres-db"
-    environment:
-    - POSTGRES_USER=user
-    - POSTGRES_PASSWORD=password
-    - POSTGRES_DB=news_db
-    ports:
-    - "5432:5432"
+      - "8100:8100"

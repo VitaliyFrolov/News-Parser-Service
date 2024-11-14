@@ -5,7 +5,7 @@ import re
 
 
 def parsingNewsLinks():
-    # Получаем все ссылки на новости с сайта
+    # Получаем все ссылки на новости с сайта фонтанки
     url = 'https://www.fontanka.ru'
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
