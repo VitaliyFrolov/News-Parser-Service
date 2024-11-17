@@ -4,9 +4,8 @@ from urllib.parse import urljoin
 import re
 
 
-def parsingNewsLinks():
-    # Получаем все ссылки на новости с сайта фонтанки
-    url = 'https://www.fontanka.ru'
+def parsingNewsLinks(newsLink):
+    url = newsLink
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
     links = []

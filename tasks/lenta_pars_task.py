@@ -1,7 +1,7 @@
-from сontrollers.lenta.parsLinks import parsingNewsLinks
-from сontrollers.lenta.parsNews import parsNews
+from сontrollers.parsLinks import parsingNewsLinks
+from сontrollers.parsNews import parsNews
 
 
 def lenta_pars_task():
-    links = parsingNewsLinks()
+    links = parsingNewsLinks('https://lenta.ru')
     parsNews(links)
