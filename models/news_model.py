@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Text
+from sqlalchemy import Column, Integer, String, Text, UniqueConstraint
 from settings.database_settings import Base, engine
 
 
@@ -8,5 +8,6 @@ class News(Base):
     title = Column(String)
     link = Column(String)
     articles = Column(Text)
+    table_args = (UniqueConstraint('title', name='unique_news_title'))
 
 Base.metadata.create_all(bind=engine)
