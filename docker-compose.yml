@@ -5,5 +5,11 @@ services:
     build: .
     restart: "always"
     container_name: "news-parser-service"
+    environment:
+      - DB_USER=root
+      - DB_PASSWORD=qweqweqwe
+      - DB_HOST=db.server.orb.local
+      - DB_PORT=5432
+      - DB_NAME=database
     ports:
-      - "8100:8100"
+      - "9000:9000"
